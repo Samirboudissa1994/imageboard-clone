@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Imageboard</title>
+    {% endif %}
 </head>
 <body>
-
+    {% block content %}{% endblock %}
 </body>
 </html>

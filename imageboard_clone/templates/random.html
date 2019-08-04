@@ -1,4 +1,55 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Random</h1>
+<center><h1>/b/ Random</h1></center>
+    <div>
+        <button id="threadbutton" onclick="openForm()">Create thread</button>
+    </div>
+    <center>
+        <div class="form-popup" id="postform">
+            <div>
+                <label for="email" class="fontsforinputs"><b>Subject</b></label>
+                <input type="text" placeholder="Subject (optional)" name="email">
+            </div>
+            <div>
+                <label for="psw" class="fontsforinputs" id="filefont"><b>File</b></label>
+                <button id="filebutton">Choose file</button>
+            </div>
+            <div>
+                <label for="psw" class="fontsforinputs" id="embedfont"><b>Embed</b></label>
+                <input id="embedinput" type="text" placeholder="Embed (http://...)" name="psw">
+            </div>
+            <div>
+                <textarea rows="4" cols="50" placeholder="Message"></textarea>
+            </div>
+            <div>
+                <button type="submit" id="submitbutton">Submit</button>
+                <button type="button" id="closingbutton" onclick="closeForm(); closeOptionForm();">Close</button>
+                <button id="optionbutton" onclick="openOptionForm()">options</button>
+            </div>
+            <div class="form-popup" id="optionsform">
+                <div>
+                    <label for="email" class="fontsforinputs"><b>Preserve file name</b></label>
+                    <input type="text" placeholder="Subject (optional)" name="email">
+                </div>
+            </div>
+        </div>
+    </center>
+    <script>
+        function openForm() {
+          document.getElementById("postform").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("postform").style.display = "none";
+        }
+    </script>
+    <script>
+        function openOptionForm() {
+          document.getElementById("optionsform").style.display = "block";
+        }
+
+        function closeOptionForm() {
+          document.getElementById("optionsform").style.display = "none";
+        }
+    </script>
 {% endblock content %}

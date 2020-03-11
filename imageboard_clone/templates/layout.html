@@ -9,14 +9,20 @@
     {% endif %}
 </head>
 <body>
-    <center id="fontti">
-        |
-        <a href="/">Home</a>
-        |
-        <a href="/b/">b</a>
-        |
-
-    </center>
+    <div class="sidebar">
+        <div class="logo">logo here</div>
+        <fieldset>
+            <legend>Imageboard</legend>
+                <a href="/">home</a><br>
+        </fieldset>
+        <fieldset>
+            <legend>Boards</legend>
+                <a href="/b/">/b/ - random</a><br>
+                <a href="/a/">/a/ - anime</a><br>
+                <a href="/v/">/v/ - vidya</a><br>
+                <a href="/fa/">/fa/ - fashion</a><br>
+        </fiedset>
+    </div>
 
         {% block content %}{% endblock %}
 </body>
